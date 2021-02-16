@@ -1,3 +1,4 @@
+using _508EventPlus.Areas.Identity.Data;
 using _508EventPlus.Data;
 using _508EventPlus.Models;
 using Microsoft.AspNetCore.Builder;
