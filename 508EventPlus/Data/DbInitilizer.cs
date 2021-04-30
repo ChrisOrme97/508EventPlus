@@ -10,6 +10,8 @@ namespace _508EventPlus.Data
     {
         public static void Initialize(EventsPlusContext context)
         {
+            // GET: Recieves and Stores Customer Information
+
             context.Database.EnsureCreated();
             if (context.Customers.Any())
             {
@@ -26,6 +28,8 @@ namespace _508EventPlus.Data
             }
             context.SaveChanges();
 
+            // GET: Recieves and Stores Organiser Information 
+
             var organisers = new Organiser[]
             {
                 new Organiser{ID=1,FirstName="Clive",LastName="Clinton",PhoneNumber="07697806532",EmailAddress="cliveclinton@gmail.com"},
@@ -37,6 +41,8 @@ namespace _508EventPlus.Data
                 context.Organisers.Add(o);
             }
             context.SaveChanges();
+            
+            // GET: Recieves and Stores Event Information.
 
             var events = new Event[]
             {

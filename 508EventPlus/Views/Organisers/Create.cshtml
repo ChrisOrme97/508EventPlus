@@ -3,11 +3,15 @@
 @{
     ViewData["Title"] = "Create";
 }
+<!--Defines the background colour by code -->
+<body style="background-color:#ECFEFD;">
 
+</body>
 <h1>Create</h1>
 
 <h4>Organiser</h4>
 <hr />
+<!-- Defines the information that needs to be filled in to create a new organiser-->
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -32,15 +36,18 @@
                 <input asp-for="EmailAddress" class="form-control" />
                 <span asp-validation-for="EmailAddress" class="text-danger"></span>
             </div>
+            <!--Displays a Submit button to confirm the information entered and save it to the database-->
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-info" />
             </div>
         </form>
     </div>
 </div>
-
+<!--Displays a button to return the user back to the table-->
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">
+        <input type="button" class="btn btn-dark" value="Back to List" />
+    </a>
 </div>
 
 @section Scripts {

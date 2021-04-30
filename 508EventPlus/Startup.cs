@@ -31,10 +31,25 @@ namespace _508EventPlus
         {
             services.AddDbContext<EventsPlusContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            // Defines the IdentityRoles and what they can be assigned as
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            .AddRoles<IdentityRole>()
+            .AddEntityFrameworkStores<EventsPlusContext>();
+            services.AddAuthorization(options => {
+
+                options.AddPolicy("manage_events_policy",
+                builder => builder.RequireRole("Attendee", "Organizer", "Admin"));
+
+                options.AddPolicy("view_organisers_policy",
+               builder => builder.RequireRole("Attendee", "Admin"));
+
+
+            });
+
+
 
 
         }

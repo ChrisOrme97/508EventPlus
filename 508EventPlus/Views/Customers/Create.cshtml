@@ -4,10 +4,16 @@
     ViewData["Title"] = "Create";
 }
 
+<!--Defines the background colour by code -->
+<body style="background-color:#ECFEFD;">
+
+</body>
+
 <h1>Create</h1>
 
 <h4>Customer</h4>
 <hr />
+<!--Defines all parameters that need to be filled with information to submit to the database on button press of Create -->
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
@@ -47,15 +53,18 @@
                 <input asp-for="Budget" class="form-control" />
                 <span asp-validation-for="Budget" class="text-danger"></span>
             </div>
+            <!--Groups the information into one slot on the datatable -->
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-info" />
             </div>
         </form>
     </div>
 </div>
-
+<!--Provides a link to return back to the table-->
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">
+        <input type="button" class="btn btn-dark" value="Back to List" />
+    </a>
 </div>
 
 @section Scripts {

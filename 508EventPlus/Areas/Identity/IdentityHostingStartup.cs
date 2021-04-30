@@ -19,8 +19,8 @@ namespace _508EventPlus.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("_508EventPlusContextConnection")));
 
-                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
-                    .AddEntityFrameworkStores<_508EventPlusContext>();
+                // services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                   // .AddEntityFrameworkStores<_508EventPlusContext>();
             });
         }
     }

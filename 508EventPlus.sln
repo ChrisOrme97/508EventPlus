@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "508EventPlus", "508EventPlus\508EventPlus.csproj", "{8B98C32F-AC10-4C28-8C28-66E341F9E14B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "508EventPlus", "508EventPlus\508EventPlus.csproj", "{8B98C32F-AC10-4C28-8C28-66E341F9E14B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsPlus.UnitTests", "EventsPlus.UnitTests\EventsPlus.UnitTests.csproj", "{B53B27C6-B4E8-40AD-A59B-DC2088A5CD0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8B98C32F-AC10-4C28-8C28-66E341F9E14B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B98C32F-AC10-4C28-8C28-66E341F9E14B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B98C32F-AC10-4C28-8C28-66E341F9E14B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B53B27C6-B4E8-40AD-A59B-DC2088A5CD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B53B27C6-B4E8-40AD-A59B-DC2088A5CD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B53B27C6-B4E8-40AD-A59B-DC2088A5CD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B53B27C6-B4E8-40AD-A59B-DC2088A5CD0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

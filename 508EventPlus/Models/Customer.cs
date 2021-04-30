@@ -9,6 +9,7 @@ namespace _508EventPlus.Models
     public class Customer
 
     {
+        // Specifies the data values to retrieve and display for Customer information
         public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

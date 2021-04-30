@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace _508EventPlus.Areas.Identity.Data
 {
+    // States EventPlus User information
     public class EventsPlusUser : IdentityUser
     {
         [PersonalData]

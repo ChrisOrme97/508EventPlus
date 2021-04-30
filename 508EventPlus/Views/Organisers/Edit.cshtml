@@ -4,10 +4,15 @@
     ViewData["Title"] = "Edit";
 }
 
+<!--Defines the background colour by code -->
+<body style="background-color:#ECFEFD;">
+
+</body>
 <h1>Edit</h1>
 
 <h4>Organiser</h4>
 <hr />
+<!-- Defines the information that can be edited for the organiser-->
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
@@ -33,15 +38,19 @@
                 <input asp-for="EmailAddress" class="form-control" />
                 <span asp-validation-for="EmailAddress" class="text-danger"></span>
             </div>
+            <!--Displays a Submit button that saves the changed information into the database-->
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-info" />
             </div>
         </form>
     </div>
 </div>
-
+<!--Displays a button that returns the user back to the table -->
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">
+        Back to List
+        <input type="button" class="btn btn-dark" value="Back to List" />
+    </a>
 </div>
 
 @section Scripts {

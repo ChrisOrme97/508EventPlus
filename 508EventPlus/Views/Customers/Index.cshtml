@@ -3,16 +3,21 @@
 @{
     ViewData["Title"] = "Index";
 }
+<!--Defines the background colour by code -->
 <body style="background-color:#ECFEFD;">
 
 </body>
 <h1>Customer Viewer</h1>
-
+<!--Displays the Create button that can be pressed -->
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">
+        <input type="button" class="btn btn-dark" value="Create" />
+    </a>
 </p>
+<!--Defines how the web page will display the datatables for customer infromation -->
 <table class="table">
-    <thead>
+    <!--Defines the header titles and the order they display -->
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.FirstName)
@@ -38,36 +43,45 @@
             <th></th>
         </tr>
     </thead>
+    <!--Defines the data in the body of the table and how it displays -->
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmailAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateOfBirth)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Budget)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Budget)
+                </td>
+                <td>
+                    <!--Decribes three buttons Edit, Details, and Delete and does the corresponding action for each one -->
+                    <a asp-action="Edit" asp-route-id="@item.ID">
+                        <input type="button" class="btn btn-info" value="Edit" />
+                    </a>
+                    <a asp-action="Details" asp-route-id="@item.ID">
+                        <input type="button" class="btn btn-dark" value="Details" />
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.ID">
+                        <input type="button" class="btn btn-danger" value="Delete" />
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

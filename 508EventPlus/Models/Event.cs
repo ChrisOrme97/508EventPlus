@@ -8,6 +8,7 @@ namespace _508EventPlus.Models
 {
     public class Event
     {
+        // Specifies the data values to retrieve and display for Event information
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
         public int OrganisersID { get; set; }

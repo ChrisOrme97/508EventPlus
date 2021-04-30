@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using _508EventPlus.Data;
 using _508EventPlus.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _508EventPlus.Controllers
 {
+  
+
     public class OrganisersController : Controller
     {
         private readonly EventsPlusContext _context;

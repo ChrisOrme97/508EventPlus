@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 namespace _508EventPlus.Models
 {
     public class Organiser
-    { 
+    {
+        // Specifies the data values to retrieve and display for Organiser information
         public int ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

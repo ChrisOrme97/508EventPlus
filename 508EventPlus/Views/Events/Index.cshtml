@@ -3,16 +3,19 @@
 @{
     ViewData["Title"] = "Index";
 }
+<!--Defines the background colour using colour codes-->
 <body style="background-color:#ECFEFD;">
 
 </body>
 <h1>Event Viewer</h1>
-
+<!--Displays a Create button used to create an entry in the events table-->
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">
+        <input type="button" class="btn btn-dark" value="Create" /></a>
 </p>
+<!--Defines the information that is to be displayed in the header of the table-->
 <table class="table">
-    <thead>
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.OrganisersID)
@@ -41,6 +44,7 @@
             <th></th>
         </tr>
     </thead>
+    <!--Defines the information that is to be displayed in the body of the table-->
     <tbody>
 @foreach (var item in Model) {
         <tr>
@@ -69,9 +73,15 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                <!--Creates buttons for each of the data entries. Providing the user with Edit, Details, and Delete buttons to edit the information in the table-->
+                <a asp-action="Edit" asp-route-id="@item.ID">
+                    <input type="button" class="btn btn-info" value="Edit" /></a> 
+
+                <a asp-action="Details" asp-route-id="@item.ID">
+                    <input type="button" class="btn btn-dark" value="Details" /></a> 
+
+                <a asp-action="Delete" asp-route-id="@item.ID">
+                    <input type="button" class="btn btn-danger" value="Delete" /></a>
             </td>
         </tr>
 }

@@ -11,6 +11,7 @@ namespace _508EventPlus.Migrations
     [DbContext(typeof(_508EventPlusContext))]
     partial class _508EventPlusContextModelSnapshot : ModelSnapshot
     {
+        // Auto-generated code that builds the structure for IdentityRoles
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618

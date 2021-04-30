@@ -13,6 +13,7 @@ namespace _508EventPlus
 {
     public class Program
     {
+        // Defines the method used to link the correct dbcontext to the program
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
